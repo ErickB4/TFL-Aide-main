@@ -29,7 +29,7 @@ class ChatThings(commands.Cog):
 
     if user_message.split()[0] == 'GetEntityData':
         #Getting entity data
-        target_url = f"https://raw.githubusercontent.com/RawZebra/TheLostLandscapes_data/main/{channel.capitalize()}/EntityData.txt" 
+        target_url = f"https://raw.githubusercontent.com/tlteam2023/Gennarvel/main/{channel.capitalize()}/EntityData.txt" 
         toReturn = ''
         resource = urllib.request.urlopen(target_url)
 
@@ -44,7 +44,7 @@ class ChatThings(commands.Cog):
         iconSplit = finalS[7].split(',')[0]
       
         #Getting entity name
-        target_url = f"https://raw.githubusercontent.com/RawZebra/TheLostLandscapes_data/main/Lang/en.txt" 
+        target_url = f"https://raw.githubusercontent.com/tlteam2023/Gennarvel/main/Lang/en.txt" 
         toReturn = ''
         resource = urllib.request.urlopen(target_url)
 
@@ -57,7 +57,7 @@ class ChatThings(commands.Cog):
         entityName = toReturn.decode("utf-8").split('=')
       
         print(entityName[1])
-        urllib.request.urlretrieve(f'https://github.com/RawZebra/TheLostLandscapes_data/raw/main/Images/{iconSplit}.png',"Images/ico.png")
+        urllib.request.urlretrieve(f'https://github.com/tlteam2023/Gennarvel/raw/main/Images/{iconSplit}.png',"Images/ico.png")
 
         font = ImageFont.truetype('Misc/font.ttf', 40)
         bg = Image.open('Images/BG.png')
