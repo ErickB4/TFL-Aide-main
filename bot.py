@@ -19,9 +19,9 @@ async def send_message(message, user_message, is_private):
 
 
 def run_discord_bot():
-  TOKEN = os.environ['TOKEN']
+  TOKEN = os.environ['MTE5MzY1Mzg3NDgxMzMyMTI1Ng.GLbOnN.vax1ekz34bk5kyOjxyix6cM6ELkewfGACYt_Qk']
   
-  serverID = 1011650341982437497
+  serverID = 1177411432338432071
   
   intents = nextcord.Intents.default()
   intents.members = True  
@@ -31,7 +31,7 @@ def run_discord_bot():
   @client.event
   async def on_ready():
     print(f'{client.user} in now running')
-    channel = client.get_channel(1011650342494158860)
+    channel = client.get_channel(1177411433420570677)
     await channel.send('I am now online!')
   
   @client.slash_command(name = 'test', description='Just testing stuff',guild_ids=[serverID])
